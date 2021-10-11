@@ -28,17 +28,18 @@ ul {
   padding-left: 0;
 }
 .country-in-the-list {
-  background-color: rgb(199, 198, 198);
-  width: 200px;
+  /* background-color: rgb(199, 198, 198); */
+  /* width: 300px; */
   margin-bottom: 15px;
   border-radius: 5px;
   font-weight: 500;
   padding: 5px;
+  font-size: 20px;
 }
 
 .current-country {
-  background-color: rgb(199, 198, 198);
-  width: 250px;
+  /* background-color: rgb(199, 198, 198); */
+  /* width: 250px; */
   padding: 10px;
   border-radius: 10px;
 }

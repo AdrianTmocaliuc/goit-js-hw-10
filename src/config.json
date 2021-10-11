@@ -1,4 +1,4 @@
 {
     "searchAPI": "https://restcountries.com/v3.1/name/",
-    "filterAPI": "?fields=name,capital,population,flag,languages"
+    "filterAPI": "?fields=name,capital,population,flags,languages"
 }
