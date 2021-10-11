@@ -8,6 +8,7 @@ export const fetchCountries = (name) => {
         .then(response => {
             if (!response.ok) {
                 Notiflix.Notify.failure('Oops, there is no country with that name');
+                // throw new Error(response.status)
             }
             return response.json();
         })
@@ -15,7 +16,7 @@ export const fetchCountries = (name) => {
 
     
 
-// console.log(`${config.searchAPI}uk${config.filterAPI}`);
+console.log(`${config.searchAPI}uk${config.filterAPI}`);
 // fetch(`https://restcountries.com/v3.1/all`)
 //     .then(response => console.log(response.json()))
 //     .then(data => console.log(data))
