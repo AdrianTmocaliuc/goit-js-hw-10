@@ -43,34 +43,34 @@ const countryDescription = arrayCountries => {
   refs.countryInfo.innerHTML = markup;
 };
 
+const arrayClear = () => {
+  refs.countryInfo.innerHTML = '';
+  refs.countryList.innerHTML = '';
+};
 const handler = () => {
   const inputValue = refs.inputName.value.trim();
   if (!inputValue) {
-    refs.countryList.innerHTML = '';
-    refs.countryInfo.innerHTML = '';
+    arrayClear();
   } else {
     fetchCountries(refs.inputName.value)
       .then(data => {
         if (data.length > 10) {
-          refs.countryInfo.innerHTML = '';
-          refs.countryList.innerHTML = '';
+          arrayClear();
           Notiflix.Notify.success(
             'MoorToo many matches found. Please enter a more specific name.e',
           );
         }
         if (data.length <= 10 && data.length > 1) {
-          refs.countryInfo.innerHTML = '';
-          refs.countryList.innerHTML = '';
+          arrayClear();
           countries(data);
         }
         if (data.length === 1) {
-          refs.countryList.innerHTML = '';
+          arrayClear();
           countryDescription(data);
         }
       })
       .catch(err => {
-        refs.countryInfo.innerHTML = '';
-        refs.countryList.innerHTML = '';
+        arrayClear();
         console.log(err);
       });
   }
